@@ -147,13 +147,13 @@ function loadUp() {
     })
 
 }
-
-    const hash = window.location.hash.replace("#", "")
+'-"
+    const hash = window.location.hash.replace(/#/g, "").replace("https://jacalastre123.github.io/JacalBlog", "").replace(/\//g, "-").replace(/^\//, "")
 
     if (hash) {
     
   
-            loader("https://jacalastre123.github.io/JacalBlog/" + hash.replace("-", "/"))
+            loader("https://jacalastre123.github.io/JacalBlog/" + hash
         
     }
 
