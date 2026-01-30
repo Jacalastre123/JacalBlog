@@ -97,9 +97,7 @@
     
     
     <div id="container">
-               <button onclick="loader('https://jacalastre123.github.io/JacalBlog/post/Blog2/MacAirM1Rev')" id="macAirM1" data-time="2026-01-28">Life with the Macbook Air M1</button>
-        <button onclick="loader('https://jacalastre123.github.io/JacalBlog/post/Blog1/wtdSynt')" id="wtds" data-time="2026-01-29">My New DSL language</button>
-                <button onclick="loader('https://jacalastre123.github.io/JacalBlog/post/Scribe/scribe')" id="scribes" data-time="2026-01-30">Life with the Macbook Air M1</button>
+     
 
         
     </div>
@@ -186,12 +184,12 @@ loadUp()
                
                
            const button = document.createElement("button")
-           button.innerText = match[1].trim()
+           button.innerText = spaced[3]
             button.onclick = function() {
-                loader(spaced[0].trim())
+                loader(spaced[1].trim())
             }
-            button.style.backgroundColor = spaced[2].trim()
-            button.dataset.time = spaced[3].trim()
+            button.style.backgroundColor = spaced[5].trim()
+            button.dataset.time = spaced[7].trim()
             container.appendChild(button)
                }
        }
