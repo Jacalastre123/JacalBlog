@@ -1,0 +1,55 @@
+
+
+# My new DSL language! This blog is written on it!
+(SM) Date Updated: 25/1/26
+
+pic(post/Blog1/Untitled.png)
+
+## Intro:
+ You didn't hear wrong! I actually made a new DSL (Domain Specic Language, for this case, I use javascript to make it be a html interpreter with a part of CSS and Javascript). It mimics various elements from <h1> to comments It is also inspired partially by Markdown
+
+
+## How to use it?
+Go to my Custom Styles website in https://jacalastre123.github.io/CustomStyle website and click the one called .wtd Support. You will need a div or a body tag with an ID of container. You call the function loader("the file path like normal img src but exclude the .wtd part"), this is just a little language of mine so do you not expect VS Code support.## Main syntax:
+## More info
+This is inspired by markdown, it uses a script tag to turn any of the valid codes in the bottom from html tags to colouring text and adding classes.
+## The Syntax
+---
+| Code / HTML equiv. / What it does 
+- # / <h1> / It is the heading for the post assuming that the h1 is for your actual title/logo
+- ## / <h2> / This is the same thing but it acts as a subheading
+- ### / <h3> / This is the sub heading for your subheading
+- pic(image here) / <img> / Inside the brackets, you put the link of your file, local or online, it will show an image or picture you put in the brackets
+- --- / <table> / This is the container to start a html table.
+- | / <tr> + <th> / This it the heading for the top of a table use should use that on the first row to define the one in the bottom
+- - text '/' / <tr> + <td> + <td>... / This one is designed so you can put the information on the table. you only use the slash part. the '' won't work
+- *LIST / <ul> / This starts an unordered list. It will let you put the actual li elements which I will show beneath this.
+- * / <li> / This will make the actual dot points for the list, if you want to use orered lists, use the plain text below
+- Just text / <p> / Any text that is not any of the code will be set as a paragraph.
+- vid(video here) / <video> <sources> / This will put a video to your page.
+ 
+
+
+## Lines, Styling and Annotations Syntax 
+---
+| Code / HTML/CSS equiv / What it does
+- ___ / <hr> / This is 3 underscores, it will make a line that cuts through most of the width the page.
+- (SM) / <small> / It will create a paragraph that is smaller
+- (BD) / <b> / This will make a paragraph that is bold 
+- (COLOR-COLOR_HERE) / CSS background-color: COLOR_HERE; / As of now, this is the only one using actual CSS. It colours your paragraph in a colour that is css supported such as RGB and a colour name (e.g green)
+- (CLASS-CLASSNAME) / <p class="CLASSNAME"> / This will assign a class to only p tags.
+- // / <!-- / This is a comment, it will be ignored and fully for annotation
+
+## ID/Javascript Syntax 
+Beside the first <=, all the others will be like this: <= ELEMENT_ID (div) and <= (END)
+---
+| Code / HTML/CSS/JS equiv / What it does
+- <= ELEMENT_ID / JS document.getElementById(ELEMENT_ID).innerText = "Just Text" / This will write some text to an already placed element on the DOM using ID.
+- <= ELEMENT_ID (div) / <div id="ELEMENT_ID">* / This will let you put content on a different div
+- <= (END) / </div>* / This is a closing tag that will end the information placed in the div
+- -+- CLASS_NAME_OPTIONAL / <div class="CLASS_NAME_OPTIONAL"> <!-- for menu / This tells DOM where to put the Table of Contents which grab all the sub heading s and the sub-sub-headings. Optionally you can style it with table.
+- /+/ / <h4>Sub Heading</h4> <h5>More Sub Heading</h5> / This will actually extract all the information
+(SM) * It will only select existing elements
+
+
+<= cont 
