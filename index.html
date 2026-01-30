@@ -173,6 +173,25 @@ loadUp()
            history.replaceState(null, "", window.location.pathname)
            window.location.reload()
        }
+
+       fetch("https://jacalastre123.github.io/JacalBlog/list.txt")
+       .then(response => response.text())
+       .then(data => {
+           const lines = data.split(/\r?\n/)
+        
+           lines.forEach(item => {
+               let spaced = item.split(" ")
+               
+           const button = document.createElement("button")
+           button.innerText = spaced[1]
+            button.onclick = function() {
+                loader(spaced[0]
+            }
+            button.style.backgroundColor = spaced[2]
+            button.dataset.time = spaced[3]
+            container.appendChild(button)
+               }
+       }
    </script>
 </body>
 </html>
