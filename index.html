@@ -27,12 +27,25 @@
             font-size: 1.5em;
             height: 5em;
             padding: 5px;
-            
+            width: 50vw;
         }
         #wtds {
-            background-color: lightgreen;
+            background-image: url("jacalastre123.github.io/JacalBlog/post/Blog1/Untitled.png");
+            position: relative;
+            background-size: cover;
+            
         }
 
+        #wtds::before {
+            position: absolute;
+            content: " ";
+            background-color: rgb(30, 100, 50);
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.6;
+        }
         header {
             display: block;
             background-color: rgb(51, 140, 167);
@@ -48,7 +61,21 @@
         }
 
         #macAirM1 {
-            background-image: linear-gradient(to right, grey, lightgrey);
+            background-image: url("jacalastre123.github.io/JacalBlog/post/Blog2/IMG_2012.jpg");
+            position: relative;
+             background-size: cover;
+        }
+
+        #MacAirM1::before {
+            background-color: rgb(0,0,0);
+            position: absolute;
+            content: " ";
+            height: 100%;
+            width: 100%;
+            opacity: 0.5;
+            top: 0;
+            left: 0;
+            
         }
 
         footer {
@@ -70,8 +97,8 @@
     
     <div id="container">
        
-        <button onclick="loader('https://jacalastre123.github.io/JacalBlog/post/Blog1/blog1')" id="wtds" data-time="2026-01-01">My New DSL language</button>
-        <button onclick="loader('https://jacalastre123.github.io/JacalBlog/post/Blog2/blog2')" id="macAirM1" data-time="2026-12-10">Life with the Macbook Air M1</button>
+        <button onclick="loader('https://jacalastre123.github.io/JacalBlog/post/Blog1/blog1')" id="wtds" data-time="2026-01-29">My New DSL language</button>
+        <button onclick="loader('https://jacalastre123.github.io/JacalBlog/post/Blog2/blog2')" id="macAirM1" data-time="2026-01-28">Life with the Macbook Air M1</button>
 
     </div>
    <footer>
