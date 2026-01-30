@@ -124,10 +124,10 @@ window.addEventListener("load", () => {
     const hash = window.location.hash
 
     if (hash) {
-        const posting = document.querySelector(hash)
-        if (posting) {
+    
+  
             loader(hash.replace("-", "/").slice(1))
-        }
+        
     }
 })
 loadUp()
