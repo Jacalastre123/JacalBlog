@@ -178,14 +178,17 @@ loadUp()
        .then(response => response.text())
        .then(data => {
            const lines = data.split(/\r?\n/)
-        
+            
            lines.forEach(item => {
-               let spaced = item.split(" ")
+               
+               let spaced = item.split('"')
+               
+               
                
            const button = document.createElement("button")
-           button.innerText = spaced[1]
+           button.innerText = match[1]
             button.onclick = function() {
-                loader(spaced[0]
+                loader(spaced[0])
             }
             button.style.backgroundColor = spaced[2]
             button.dataset.time = spaced[3]
