@@ -10,7 +10,7 @@ pic(post/Blog1/Untitled.png)
 
 
 ## How to use it?
-Go to my Custom Styles website in https://jacalastre123.github.io/CustomStyle website and click the one called .wtd Support. You will need a div or a body tag with an ID of container. You call the function loader("the file path like normal img src but exclude the .wtd part"), this is just a little language of mine so do you not expect VS Code support.## Main syntax:
+Go to my Custom Styles website in https://jacalastre123.github.io/CustomStyle website and click the one called .wtd Support. You will need a div or a body tag with an ID of container. You call the function loader("the file path like normal img src but exclude the .wtd part"), this is just a little language of mine so do you not expect VS Code support.
 ## More info
 This is inspired by markdown, it uses a script tag to turn any of the valid codes in the bottom from html tags to colouring text and adding classes.
 ## The Syntax
