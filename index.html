@@ -174,7 +174,7 @@ loadUp()
            window.location.reload()
        }
 
-       fetch("https://jacalastre123.github.io/JacalBlog/list.txt")
+       fetch("https://jacalastre123.github.io/JacalBlog/List.txt")
        .then(response => response.text())
        .then(data => {
            const lines = data.split(/\r?\n/)
@@ -186,12 +186,12 @@ loadUp()
                
                
            const button = document.createElement("button")
-           button.innerText = match[1]
+           button.innerText = match[1].trim()
             button.onclick = function() {
-                loader(spaced[0])
+                loader(spaced[0].trim())
             }
-            button.style.backgroundColor = spaced[2]
-            button.dataset.time = spaced[3]
+            button.style.backgroundColor = spaced[2].trim()
+            button.dataset.time = spaced[3].trim()
             container.appendChild(button)
                }
        }
