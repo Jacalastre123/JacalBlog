@@ -23,6 +23,9 @@
            
         }
 
+        button {
+            background-color: rgba(255,255,255,0.5);
+        }
         #container button {
             font-size: 1.5em;
             height: 5em;
@@ -30,7 +33,7 @@
             width: 47.5vw;
         }
         #wtds {
-            background-image: url("jacalastre123.github.io/JacalBlog/post/Blog1/Untitled.png");
+            background-image: url("https://jacalastre123.github.io/JacalBlog/post/Blog1/Untitled.png");
             position: relative;
             background-size: cover;
             
@@ -61,7 +64,7 @@
         }
 
         #macAirM1 {
-            background-image: url("jacalastre123.github.io/JacalBlog/post/Blog2/IMG_2012.jpg");
+            background-image: url("https://jacalastre123.github.io/JacalBlog/post/Blog2/IMG_2012.jpg");
             position: relative;
              background-size: cover;
         }
@@ -88,7 +91,12 @@
         }
         header button {
             width: 10vh;
+                  
+            border: 1px solid black;
+            border-radius: 3px;
         }
+        
+        
     </style>
 </head>
 <body>
@@ -115,13 +123,12 @@
     <div id="cont"></div>
    
     <p id="footer">By Jacalastre123</p>
+       <button onclick="share(this)">Share Current Page</button>
    </footer>
-   <dialog id="searchDial">
-    <h3>Search results for: <span id="res"></span></h3>
-
-   </dialog>
-
+     
+    
     <script src="calc.js"></script>
+    
    <script>
     const search = document.getElementById("search")
     let current = new Date()
@@ -166,6 +173,14 @@ function loadUp() {
     }
 
 loadUp()
+
+       function share(e) {
+           navigator.clipboard.writeText(window.location.href)
+           e.innerText = "Thanks!"
+           setTimeout(function() {
+               e.innerText = "Share Current Page
+           }, 1000)
+       }
    </script>
 </body>
 </html>
