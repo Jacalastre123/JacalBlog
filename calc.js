@@ -319,15 +319,6 @@ newList.style.padding = "10px"
 })
 .catch(err => console.error(err))
 
-history.replaceState(null, "", "#" + post.replace(/\//g, "-"))
+history.replaceState(null, "", "#" + post.slice(42).replace(/\//g, "-"))
 }
 
-window.addEventListener("load", () => {
-    const hash = window.location.hash
-    if (hash) {
-        const posting = document.querySelector(hash)
-        if (posting) {
-            loader(posting)
-        }
-    }
-})
