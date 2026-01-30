@@ -121,12 +121,12 @@ function loadUp() {
 
 }
 
-    const hash = window.location.hash
+    const hash = window.location.hash.slice(1)
 
     if (hash) {
     
   
-            loader("https://jacalastre123.github.io/JacalBlog" + hash.replace("-", "/").slice(1))
+            loader("https://jacalastre123.github.io/JacalBlog" + hash.replace("-", "/"))
         
     }
 
