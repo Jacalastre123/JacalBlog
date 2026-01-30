@@ -319,6 +319,6 @@ newList.style.padding = "10px"
 })
 .catch(err => console.error(err))
 
-history.replaceState(null, "", "#" + post.slice(43).replace(/\//g, "-"))
+history.replaceState(null, "", "#" + post.slice(44).replace(/\//g, "-"))
 }
 
