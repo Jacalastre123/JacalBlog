@@ -91,9 +91,9 @@
 </head>
 <body>
     <header>
-    <h1>Jacalastre123 Blogs</h1>
+    <h1 onclick="returns()">Jacalastre123 Blogs</h1>
     <h4>Where you find my blogs!</h4>
-    <h6>Blogs by WTD</h6>
+    
     <form>
         <input type="search" id="search">
         <button onclick="finish()">Search</button>
@@ -105,7 +105,7 @@
        
         <button onclick="loader('https://jacalastre123.github.io/JacalBlog/post/Blog1/blog1')" id="wtds" data-time="2026-01-29">My New DSL language</button>
         <button onclick="loader('https://jacalastre123.github.io/JacalBlog/post/Blog2/blog2')" id="macAirM1" data-time="2026-01-28">Life with the Macbook Air M1</button>
-
+        
     </div>
    <footer>
     <hr>
@@ -114,7 +114,7 @@
    
     <p id="footer">By Jacalastre123</p>
        <button onclick="share(this)">Share Current Page</button>
-   
+       
    </footer>
      
     
@@ -171,6 +171,11 @@ loadUp()
            setTimeout(function() {
                e.innerText = "Share Current Page"
            }, 1000)
+       }
+
+       function returns() {
+           history.replaceState(null, "", window.location.pathname)
+           window.reload()
        }
    </script>
 </body>
