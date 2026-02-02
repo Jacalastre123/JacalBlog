@@ -258,28 +258,17 @@ newList.style.padding = "10px"
                         }
                         para.innerText = line
                     }
-         }
+                }
                         else if (line.startsWith("[ID=")) {
                         let match2 = line.slice(4,-1)
                             const newParas = document.createElement("p")
                        newParas.id = match2
                       
                             container.appendChild(newParas)
-                        
-                    line.split(" ").forEach(item => {
-                     else if (item.includes("[") && item.incudes("]") && item.startsWith("'") && item.endsWith("'")) {
-                           
-                         let match3 = item.indexOf("'").lastIndexOf("'").substring(item.indexOf("["), item.indexOf("]"))
-                            const newA = document.createElement("a")
-                       newParas2.href = match3
-                         let charat = line.charAt("]")
-                         newA.innerText = item.substring(item.indexOf("]"))
-                         
-                      
-                            container.appendChild(newA)
-                    } })}
+                        }
+                 
 
-                                      else if (line.startsWith("$")) {
+                     else if (line.startsWith("$")) {
                         let match3 = line.slice(1)
                                         if (match3.startsWith("BGCOL=")) {
                                             container.style.backgroundColor = match3.trim().slice(6)
@@ -315,15 +304,28 @@ newList.style.padding = "10px"
                             para.className = match3[1]
                             line = line.replace(match3[0], "").trim()
                         }
-                        para.innerText = line
-                    }
-                    else {
+                        
+                    
+                                 else {
                          para.innerText = line
                     }
-
+line.split(" ").forEach(item => {
+                     if (item.includes("[") && item.incudes("]") && item.startsWith("'") && item.endsWith("'")) {
+                           
+                         let match3 = item.slice(indexOf("'")).slice(0, lastIndexOf("'")).substring(item.indexOf("["), item.indexOf("]"))
+                            const newA = document.createElement("a")
+                       newA.href = match3
+                         let charat = line.charAt("]")
+                         newA.innerText = item.substring(item.indexOf("]"))
+                         
+                      
+                            container.appendChild(newA)
+                    }}) 
+                
                     container.appendChild(para)
-                    
-        } }
+    }
+}             
+         
      
 
 
