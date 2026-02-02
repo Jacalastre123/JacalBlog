@@ -171,10 +171,10 @@ loadUp()
            const button = document.createElement("button")
            button.innerText = spaced[3]
             button.onclick = function() {
-                loader(spaced[1].trim())
+                loader(spaced[1])
             }
-            button.style.backgroundColor = spaced[5].trim()
-            button.dataset.time = spaced[7].trim()
+            button.style.backgroundColor = spaced[5]
+            button.dataset.time = spaced[7]
             container.appendChild(button)
                })
        })
