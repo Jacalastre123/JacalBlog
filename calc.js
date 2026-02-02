@@ -258,14 +258,14 @@ newList.style.padding = "10px"
                         }
                         para.innerText = line
                     }
-
+         }
                         else if (line.startsWith("[ID=")) {
                         let match2 = line.slice(4,-1)
                             const newParas = document.createElement("p")
                        newParas.id = match2
                       
                             container.appendChild(newParas)
-                    }    
+                        
                     line.split(" ").forEach(item => {
                      else if (item.includes("[") && item.incudes("]") && item.startsWith("'") && item.endsWith("'")) {
                            
@@ -277,7 +277,7 @@ newList.style.padding = "10px"
                          
                       
                             container.appendChild(newA)
-                    } })
+                    } })}
 
                                       else if (line.startsWith("$")) {
                         let match3 = line.slice(1)
