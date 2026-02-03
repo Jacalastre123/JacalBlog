@@ -144,6 +144,7 @@ function loadUp() {
        }
 
        function returns() {
+            container.innerHTML = "" 
            history.replaceState(null, "", window.location.pathname)
            window.location.reload()
        }
@@ -151,6 +152,10 @@ function loadUp() {
        fetch("https://jacalastre123.github.io/JacalBlog/List.txt")
        .then(response => response.text())
        .then(data => {
+           
+           
+           
+           container.innerHTML = "" 
            const lines = data.split(/\r?\n/)
             
            lines.forEach(item => {
@@ -173,7 +178,7 @@ function loadUp() {
            const hash = window.location.hash.replace("https://jacalastre123.github.io/JacalBlog/", "").replace(/\//g, "-").replace(/^\//, "").slice(2)
 
     if (hash) {
-    
+                
               container.innerHTML = ""
             loader("https://jacalastre123.github.io/JacalBlog/" + hash.replace(/-/g, "/"))
         
