@@ -133,16 +133,7 @@ function loadUp() {
 
 }
 
-    const hash = window.location.hash.replace("https://jacalastre123.github.io/JacalBlog/", "").replace(/\//g, "-").replace(/^\//, "").slice(2)
 
-    if (hash) {
-    
-  
-            loader("https://jacalastre123.github.io/JacalBlog/" + hash.replace(/-/g, "/"))
-        
-    }
-
-loadUp()
 
        function share(e) {
            navigator.clipboard.writeText(window.location.href)
@@ -178,6 +169,17 @@ loadUp()
             container.appendChild(button)
                })
        })
+
+           const hash = window.location.hash.replace("https://jacalastre123.github.io/JacalBlog/", "").replace(/\//g, "-").replace(/^\//, "").slice(2)
+
+    if (hash) {
+    
+              container.innerHTML = ""
+            loader("https://jacalastre123.github.io/JacalBlog/" + hash.replace(/-/g, "/"))
+        
+    }
+
+loadUp()
        
    </script>
 </body>
