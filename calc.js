@@ -250,6 +250,11 @@ newList.style.padding = "10px"
                         
                     }
 
+                     else {
+                             container.appendChild(para)
+                     }
+                    }
+
                     else if (line.includes("(COLOR-")) {
                         let match = line.match(/\(COLOR-([^)]+)\)/)
                         if (match) {
@@ -258,7 +263,7 @@ newList.style.padding = "10px"
                         }
                         para.innerText = line
                     }
-                }
+                
                         else if (line.startsWith("[ID=")) {
                         let match2 = line.slice(4,-1)
                             const newParas = document.createElement("p")
@@ -316,14 +321,14 @@ line.split(" ").forEach(item => {
                          let match3 = item.slice(indexOf("'")).slice(0, lastIndexOf("'")).substring(item.indexOf("["), item.indexOf("]"))
                             const newA = document.createElement("a")
                        newA.href = match3
-                         let charat = line.charAt("]")
+
                          newA.innerText = item.substring(item.indexOf("]"))
                          
                       
                             container.appendChild(newA)
                     }}) 
                 
-                    container.appendChild(para)
+                   
     }
             
          
