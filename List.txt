@@ -1,4 +1,4 @@
-"https://jacalastre123.github.io/JacalBlog/post/Blog1/wtdSynt" "I made a new DSL language!" "rgb(20,100,50)" "2026-01-29"
+"https://jacalastre123.github.io/JacalBlog/post/Blog1/wtdSynt" "I made a new DSL language!" "rgb(20,100,50)" "2026-01-30"
 "https://jacalastre123.github.io/JacalBlog/post/Blog2/MacAirM1Rev" "Life with Macbook Air M1" "lightgrey" "2026-01-30"
 "https://jacalastre123.github.io/JacalBlog/post/Scribe/scribe" "Kindle Scribe 2024 in 2026" "rgb(120,120,120)" "2026-01-30"
 "https://jacalastre123.github.io/JacalBlog/post/websiteNews/CPUCount" "My new CPU Race Game!" "#7BB5D7" "2026-02-02"
