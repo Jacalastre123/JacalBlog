@@ -306,9 +306,10 @@ newList.style.padding = "10px"
                         }
                         
                     
-                                 else {
+                        else {
                          para.innerText = line
                     }
+                }
 line.split(" ").forEach(item => {
                      if (item.includes("[") && item.incudes("]") && item.startsWith("'") && item.endsWith("'")) {
                            
@@ -324,7 +325,7 @@ line.split(" ").forEach(item => {
                 
                     container.appendChild(para)
     }
-}             
+            
          
      
 
