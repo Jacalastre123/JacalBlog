@@ -102,7 +102,8 @@
    <script>
     const search = document.getElementById("search")
     let current = new Date()
-
+    let hashed = false
+    container.innerHTML = ""
     function finish() {
         container.querySelectorAll("button").forEach(item => {
             if (item.innerText.toLowerCase().includes(search.value) || search.value.trim() === "" || item.innerText.includes(search.value)) {
@@ -147,8 +148,18 @@ function loadUp() {
             container.innerHTML = "" 
            history.replaceState(null, "", window.location.pathname)
            window.location.reload()
+           
        }
+               const hash = window.location.hash.replace("https://jacalastre123.github.io/JacalBlog/", "").replace(/\//g, "-").replace(/^\//, "").slice(2)
 
+    if (hash) {
+                
+              container.innerHTML = ""
+            loader("https://jacalastre123.github.io/JacalBlog/" + hash.replace(/-/g, "/"))
+        hashed = true
+        
+    }
+       if (!hashed) {
        fetch("https://jacalastre123.github.io/JacalBlog/List.txt")
        .then(response => response.text())
        .then(data => {
@@ -173,16 +184,9 @@ function loadUp() {
             button.dataset.time = spaced[7]
             container.appendChild(button)
                })
-       })
+       })}
 
-           const hash = window.location.hash.replace("https://jacalastre123.github.io/JacalBlog/", "").replace(/\//g, "-").replace(/^\//, "").slice(2)
 
-    if (hash) {
-                
-              container.innerHTML = ""
-            loader("https://jacalastre123.github.io/JacalBlog/" + hash.replace(/-/g, "/"))
-        
-    }
 
 loadUp()
        
