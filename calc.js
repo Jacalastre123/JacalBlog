@@ -249,10 +249,12 @@ newList.style.padding = "10px"
                    
                         
                     }
-
-                     else {
-                             container.appendChild(para)
+                    
+                    else {
+                            para.innerText = args
+                      
                      }
+                            container.appendChild(para)
                     }
 
                     else if (line.includes("(COLOR-")) {
