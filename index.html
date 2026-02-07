@@ -175,7 +175,7 @@ function loadUp() {
            const lines = data.split(/\r?\n/)
             
            lines.forEach(item => {
-               
+               if (item.innerText.trim !== "") {
                let spaced = item.split('"')
                
                
@@ -188,6 +188,7 @@ function loadUp() {
             button.style.backgroundColor = spaced[5]
             button.dataset.time = spaced[7]
             container.appendChild(button)
+               }
                })
        })}
 
