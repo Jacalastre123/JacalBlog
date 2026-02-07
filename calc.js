@@ -112,7 +112,8 @@ newList.style.padding = "10px"
                        
                             
                         }
-                         
+                         newSub.style.padding = "2px"
+                        newSub.style.backgroundColor = "lightgrey"
                          newSub.innerText = item.textContent
                           menu.appendChild(newSub)
                         
