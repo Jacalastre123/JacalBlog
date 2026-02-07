@@ -116,7 +116,7 @@
                 if (search.value.trim() === "") {
                     loadUp()
                 }
-                        }
+                }
             else {
                 item.style.display = "none"
             }
@@ -169,13 +169,11 @@ function loadUp() {
        .then(response => response.text())
        .then(data => {
            
-           
-           
            container.innerHTML = "" 
            const lines = data.split(/\r?\n/)
             
            lines.forEach(item => {
-               if (item..trim() !== "") {
+               if (item.trim() !== "") {
                let spaced = item.split('"')
                
                
