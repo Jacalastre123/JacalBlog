@@ -2,3 +2,4 @@
 "https://jacalastre123.github.io/JacalBlog/post/Blog2/MacAirM1Rev" "Life with Macbook Air M1" "lightgrey" "2026-01-30"
 "https://jacalastre123.github.io/JacalBlog/post/Scribe/scribe" "Kindle Scribe 2024 in 2026" "rgb(120,120,120)" "2026-01-30"
 "https://jacalastre123.github.io/JacalBlog/post/websiteNews/CPUCount" "My new CPU Race Game!" "#7BB5D7" "2026-02-02"
+"https://jacalastre123.github.io/JacalBlog/post/websiteNews/SpellingUpdate1" "New Spelling Bee Update 7/2/2026!" "gold" "2026-02-07"
