@@ -71,6 +71,19 @@
             cursor: pointer;
         }
         
+        @media print {
+            body {
+                visibility: hidden;
+            }
+
+            #container {
+                visibility: visible;
+            }
+
+            h1 {
+                 visibility: visible;
+            }
+        }
     </style>
 </head>
 <body>
@@ -86,11 +99,11 @@
     </header>
     
     
-    <div id="container">
+    <article id="container">
      
 
         
-    </div>
+    </article>
    <footer>
     <hr>
      <img id="imag">
@@ -98,6 +111,10 @@
    
     <p id="footer">By Jacalastre123</p>
        <button onclick="share(this)">Share Current Page</button>
+       <button onclick="speech(this)">Text to speech</button>
+       <button onclick="window.print()">Print</button>
+
+
        
    </footer>
      
@@ -190,7 +207,16 @@ function loadUp() {
                })
        })}
 
+       function speech(button) {
+        speechSynthesis.speak(new SpeechSynthesisUtterance(container.innerText.replace('<', '').replace('>', ''))); 
+        button.onclick = function() {
+            speechSynthesis.cancel()
+            button.onclick = function() {
+                speech(this)
+            }
+        }
 
+       }
 
 loadUp()
        
