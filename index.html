@@ -114,7 +114,7 @@
        <button onclick="share(this)">Share Current Page</button>
        <button onclick="speech(this)">Text to speech</button>
        <button onclick="window.print()">Print</button>
-       <button onclick="docX()">Export as a .docx</button>
+       <button onclick="docx()">Export as a txt</button>
 
 
        
@@ -147,8 +147,8 @@ https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.min.js
 
        function docx() {
            const downloading = document.createElement("a")
-           downloading.href = URL.createObjectURL(htmlDocx.asBlob(container.innerHTML, margin: {orientation: 'portrait', margin { top: 720 }})
-            link.download = "JacalBlog-article.docx"
+           downloading.href = URL.createObjectURL( new Blob([container.innerText], {type: "text/plain"})
+            link.download = "JacalBlog-article.txt"
            link.click()
        }
 function loadUp() {
